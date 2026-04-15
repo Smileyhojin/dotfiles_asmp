@@ -11,6 +11,7 @@ pacman -S --noconfirm --needed vim neovim fastfetch btop zsh fish starship zoxid
 
 # Install rust and related stuffs
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- -y
+. "$HOME/.cargo/env" # source cargo env in bash
 rustup default stable
 rustup component add rust-analyzer
 rustup update
