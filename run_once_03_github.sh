@@ -1,3 +1,5 @@
+#!/bin/bash
+set -euo pipefail
 
 # Set git user
 git config --global user.email "ic434hojin@gmail.com"
