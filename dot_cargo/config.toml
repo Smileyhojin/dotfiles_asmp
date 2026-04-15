@@ -1,0 +1,6 @@
+net.git-fetch-with-cli = true
+
+[registries.kellnr]
+index = "sparse+https://kellnr.spacer.im/api/v1/crates/"
+credential-provider = ["cargo:token"]
+token = "" # write the token here 
