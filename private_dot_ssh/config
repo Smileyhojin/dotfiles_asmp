@@ -1,0 +1,6 @@
+Host macmini
+    HostName 211.104.145.151
+    User smileyhojin
+
+Host github.com
+    IdentityFile ~/.ssh/id_ed25519_asmp_hjyoo
