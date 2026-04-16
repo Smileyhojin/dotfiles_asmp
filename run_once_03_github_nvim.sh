@@ -8,5 +8,9 @@ git config --global user.name "Smileyhojin"
 # ssh-keygen
 ssh-keygen -t ed25519 -f ~/.ssh/id_ed25519_asmp_hjyoo -N ""
 
-# Configure nvim
-chezmoi apply --include=externals --refresh-externals
+# configure nvim
+if [ -d "$HOME/.config/nvim" ]; then
+    echo "~/.config/nvim already exists, skipping clone"
+else
+    git clone https://github.com/Smileyhojin/LazyVim_config.git "$HOME/.config/nvim"
+fi
