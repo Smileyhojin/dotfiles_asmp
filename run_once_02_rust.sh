@@ -16,7 +16,7 @@ log_step()  { echo -e "\n${CYAN}${BOLD}==> $*${RESET}"; }
 
 # ── Install Rust ──────────────────────────────────────────────────────────────
 log_step "Installing Rust via rustup..."
-curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- -y
+curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- -y --no-modify-path
 source "$HOME/.cargo/env"
 
 # ── Configure Rust toolchain ──────────────────────────────────────────────────
