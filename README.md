@@ -7,7 +7,7 @@ Assumes a clean Arch Linux as a starting point.
 ## How to Use
 
 ```sh
-sh -c "$(curl -fsLS get.chezmoi.io)" -- init --apply Smileyhojin/dotfiles_asmp
+sh -c "$(curl -fsLS get.chezmoi.io)" -- init --apply --exclude-externals Smileyhojin/dotfiles_asmp
 ```
 
 After running `gh auth login` and configuring the kellnr token, the house is ready to use.
