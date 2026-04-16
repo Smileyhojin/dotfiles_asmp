@@ -1,6 +1,6 @@
 # dotfiles_asmp
 
-Dotfiles for the 'House', suited for IE team of Asteromorph.
+Dotfiles for the 'House', including everything needed for Asteromorph IE team engineers.
 
 Assumes a clean Arch Linux as a starting point.
 
@@ -12,6 +12,7 @@ Assumes a clean Arch Linux as a starting point.
 - Editors: `vim` `neovim`
 - Shell & Prompt: `fish` `zsh` `starship` `zoxide` `fzf` `eza`
 - TUI / Multiplexer: `btop` `fastfetch` `tmux` `zellij`
+- Dotfiles Management: `chezmoi`
 
 ### Rust — via `rustup`
 
