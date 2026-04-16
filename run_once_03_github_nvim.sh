@@ -4,13 +4,12 @@ set -euo pipefail
 # ── Logging helpers ───────────────────────────────────────────────────────────
 BOLD='\033[1m'
 GREEN='\033[0;32m'
-YELLOW='\033[1;33m'
+YELLOW='\033[33m'
 RED='\033[0;31m'
 CYAN='\033[0;36m'
-BLUE='\033[0;34m'
 RESET='\033[0m'
 
-log_info()  { echo -e "${GREEN}${BOLD}INFO${RESET}: $*"; }
+log_info()  { echo -e "\n${GREEN}${BOLD}INFO${RESET}: $*"; }
 log_warn()  { echo -e "${YELLOW}${BOLD}WARNING${RESET}: $*"; }
 log_error() { echo -e "${RED}${BOLD}ERROR${RESET}: $*" >&2; }
 log_step()  { echo -e "\n${CYAN}${BOLD}==> $*${RESET}"; }
@@ -29,11 +28,16 @@ fi
 
 # ── Finalization notice ───────────────────────────────────────────────────────
 echo ""
-echo -e "${BOLD}${CYAN}==================================================================${RESET}"
-echo -e "${BOLD}${CYAN}   Installation complete! Run these commands to finalize setup:   ${RESET}"
-echo -e "${BOLD}${CYAN}==================================================================${RESET}"
+echo -e "${BOLD}${GREEN}==================================================================${RESET}"
+echo -e "${BOLD}${GREEN}   Installation complete! Run these commands to finalize setup:   ${RESET}"
+echo -e "${BOLD}${GREEN}==================================================================${RESET}"
 echo ""
-echo -e "${BOLD}1. Set your git identity${RESET}"
+echo -e "${BOLD}0. Remark on the default shell${RESET}"
+echo -e "   The default shell is now set to fish."
+echo -e "   You can apply the change by either logging out and back in, or running: ${YELLOW}exec fish${RESET}."
+echo -e "   For a POSIX-compliant experience, use ${YELLOW}zsh${RESET}."
+echo ""
+echo -e "${BOLD}1. Set your git identity:${RESET}"
 echo -e "   ${YELLOW}git config --global user.email \"you@example.com\"${RESET}"
 echo -e "   ${YELLOW}git config --global user.name  \"Your Name\"${RESET}"
 echo ""
@@ -43,5 +47,5 @@ echo ""
 echo -e "${BOLD}3. Paste kellnr token at:${RESET}"
 echo -e "   ${YELLOW}~/.cargo/config.toml${RESET}"
 echo ""
-echo -e "${BOLD}then your House is good to go.${RESET}"
+echo -e "${BOLD}Then your House is good to go!${RESET}"
 echo ""

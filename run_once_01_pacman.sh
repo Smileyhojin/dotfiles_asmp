@@ -9,7 +9,7 @@ RED='\033[0;31m'
 CYAN='\033[0;36m'
 RESET='\033[0m'
 
-log_info()  { echo -e "${GREEN}${BOLD}INFO${RESET}: $*"; }
+log_info()  { echo -e "\n${GREEN}${BOLD}INFO${RESET}: $*"; }
 log_warn()  { echo -e "${YELLOW}${BOLD}WARNING${RESET}: $*"; }
 log_error() { echo -e "${RED}${BOLD}ERROR${RESET}: $*" >&2; }
 log_step()  { echo -e "\n${CYAN}${BOLD}==> $*${RESET}"; }
@@ -41,7 +41,7 @@ pacman_retry -Syyu --noconfirm
 
 # ── Install packages ──────────────────────────────────────────────────────────
 log_step "Installing Build/Dev tools..."
-pacman_retry -S --noconfirm --needed base-devel npm nodejs git github-cli openssh wget less unzip
+pacman_retry -S --noconfirm --needed base-devel npm nodejs git github-cli openssh wget less unzip chezmoi
 
 log_step "Installing Editors..."
 pacman_retry -S --noconfirm --needed vim neovim
