@@ -41,7 +41,7 @@ pacman_retry -Syyu --noconfirm
 
 # ── Install packages ──────────────────────────────────────────────────────────
 log_step "Installing Build/Dev tools..."
-pacman_retry -S --noconfirm --needed base-devel npm nodejs git github-cli openssh wget less unzip chezmoi
+pacman_retry -S --noconfirm --needed base-devel npm nodejs git github-cli openssh wget less unzip
 
 log_step "Installing Editors..."
 pacman_retry -S --noconfirm --needed vim neovim
@@ -51,5 +51,9 @@ pacman_retry -S --noconfirm --needed fish zsh starship zoxide fzf eza
 
 log_step "Installing TUI / Multiplexer tools..."
 pacman_retry -S --noconfirm --needed btop fastfetch tmux zellij
+
+log_step "Re-installing Chezmoi..."
+which chezmoi | xargs rm
+pacman_retry -S --noconfirm --needed chezmoi
 
 log_info "all pacman packages installed successfully."
