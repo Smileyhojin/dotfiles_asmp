@@ -34,7 +34,7 @@ Use the following one-liner to install chezmoi and apply the dotfiles:
 sh -c "$(curl -fsLS get.chezmoi.io)" -- init --apply Smileyhojin/dotfiles_asmp
 ```
 
-After git/github & kellnr token configuration, the 'House' is ready to use.
+After kellnr token & git/github configuration, the 'House' is ready to use.
 
 ---
 
