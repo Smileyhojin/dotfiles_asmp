@@ -23,7 +23,7 @@ log_step "Cloning nvim config..."
 if [ -d "$HOME/.config/nvim" ]; then
     log_info "~/.config/nvim already exists, skipping clone."
 else
-    git clone https://github.com/Smileyhojin/LazyVim_config.git "$HOME/.config/nvim"
+    git clone https://github.com/Smileyhojin/nvim_config.git "$HOME/.config/nvim"
 fi
 
 # ── Finalization notice ───────────────────────────────────────────────────────
